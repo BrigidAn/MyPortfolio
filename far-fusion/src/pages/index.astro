@@ -1,0 +1,181 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+
+      .section-divider {
+        margin: 3rem auto;
+        border: 0;
+        height: 2px;
+        background: #f3f4f6;
+        width: 60%;
+        border-radius: 1px;
+      }
+
+
+      .btn,
+      .btn-link,
+      .btn-outline {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        margin: 0.4rem 0.3rem 0 0;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn {
+        background: #dfbce7;
+        color: rgb(5, 3, 3);
+        font-weight: bold;
+        border: none;
+      }
+
+      .btn:hover {
+        background: #cf6ce5;
+      }
+
+      .btn-outline {
+        border: 2px solid #d900ff;
+        color: #090f16;
+        background: transparent;
+      }
+
+      .btn-outline:hover {
+        background: #eb62fb;
+        color: white;
+      }
+
+      .btn-link {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 19px;
+         display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+        border-radius: 20px;
+           text-decoration: none;
+        background: linear-gradient(to right, #dfa0e8, #cf74cb);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .socials a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+        border-radius: 6px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #9e4ba9, #e57be0);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .socials a:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+    </style>
+	</head>
+	<body>
+		<Header />
+		<main class="main-content">
+      <section class="hero">
+        <h1>🙋‍♀️ Hi, I’m Chimerema Brigid Anyawu</h1>
+        <p>I'm a software developer passionate about building clean, scalable web and mobile applications.</p>
+        <div class="cta">
+          <a href="/blog" class="btn">View My Work</a>
+          <a href="/public/Cv.pdf" class="btn btn-outline" target="_blank">📄 View Résumé</a>
+        </div>
+      </section>
+
+    <hr class="section-divider" />
+    
+      <section class="about-preview">
+        <h2>👋About Me</h2>
+        <p>
+          With a strong foundation in application development, I create digital experiences that are functional and user-friendly. 
+          I’ve built projects using Java, Kotlin, React, and Android Studio, and I love solving real-world problems with code.
+        </p>
+        <a href="/about" class="btn-link">Read more →</a>
+      </section>
+
+    <hr class="section-divider" />
+
+      <!-- 💼 Featured Projects -->
+      <section class="projects">
+        <h2>💼 Featured Projects</h2>
+        <ul>
+          <li>
+            <strong>Hour Guard App</strong> – A Kotlin-based time-tracking tool for freelancers.  
+            <a href="https://github.com/BrigidAn/HourGuardAPP.git" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <strong>Task Manager</strong> – A Java NetBeans desktop app for managing and organizing tasks.  
+            <a href="https://github.com/BrigidAn/TaskManager.git" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <strong>React Portfolio</strong> – My modern developer portfolio built with React + Vite.  
+            <a href="https://github.com/BrigidAn/ReactPortfolio.git" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </section>
+
+    <hr class="section-divider" />
+
+<section class="skills">
+  <h2>🛠 Tech Stack</h2>
+  <p>Here are some of the tools and technologies I work with:</p>
+  <ul>
+    <li><strong>Languages:</strong>
+      <ul>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+      </ul>
+    </li>
+    <li><strong>Frameworks & Tools:</strong>
+      <ul>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Android Studio</li>
+        <li>NetBeans</li>
+      </ul>
+    </li>
+    <li><strong>Other Technologies:</strong>
+      <ul>
+        <li>Firebase</li>
+        <li>Git</li>
+        <li>VS Code</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+  <hr class="section-divider" />
+
+      <!-- 📬 Contact -->
+      <section class="contact">
+        <h2>📬Let’s Connect</h2>
+        <p>Have a project or collaboration idea? I’d love to hear from you!</p>
+        <a href="mailto:ochimerema@gmail.com" class="btn">Email Me</a>
+        <div class="socials">
+          <a href="https://github.com/BrigidAn" target="_blank">GitHub</a> |
+          <a href="https://linkedin.com/in/brigid-anyawu-1a0815240" target="_blank">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
