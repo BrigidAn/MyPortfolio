@@ -7,6 +7,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://github.com/BrigidAn/MyPortfolio.git',
 	integrations: [mdx(), sitemap()],
-	base: '/MyPortfolio/',
-	trailingSlash: 'always'
+	
 });
