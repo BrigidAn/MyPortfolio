@@ -1,48 +1,58 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	  <p>
-    I'm <strong>Chimerema Brigid Anyanwu</strong>, a graduate with a Bachelor's degree in Computer and Information Science, specializing in Application Development. I'm passionate about crafting impactful digital experiences and currently working on freelance projects that allow me to turn ideas into functional, user-friendly applications.
-  </p>
 
-  <p>
-    My long-term goal is to become a software developer known for building robust, scalable, and intuitive software. With a strong foundation in both front-end and back-end development, I’ve built several projects that reflect my commitment to clean code and purposeful design.
-  </p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="About Me – Chimerema Brigid Anyanwu" description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="main-content">
+      <section class="about-section">
+        <h1>👩‍💻 About Me</h1>
+        <p>
+          I'm <strong>Chimerema Brigid Anyanwu</strong>, a graduate in Computer and Information Science with a focus on Application Development. 
+          I’m passionate about building impactful and user-friendly web and mobile apps through clean code and thoughtful design.
+        </p>
 
-  <h2>🛠 Technical Skills</h2>
-  <ul>
-    <li><strong>Languages:</strong> Java, C#, JavaScript, Kotlin, Node.js, Sql, HTML/CSS</li>
-    <li><strong>Frameworks:</strong> React, React Native, Express.js</li>
-    <li><strong>Tools & Platforms:</strong> Git, Visual Studio, Firebase, VS Code, Android Studio, Apache Netbeans, ASP.NET</li>
-    <li><strong>Focus Areas:</strong> Mobile & Web App Development, Cross-Platform Solutions, UI/UX Fundamentals</li>
-  </ul>
+        <p>
+          With experience in both front-end and back-end technologies, I’ve developed several projects using tools like Java, Kotlin, React, and Android Studio. 
+          I aim to become a developer known for crafting scalable and intuitive solutions.
+        </p>
 
-  <p>
-    I enjoy diving into new challenges and staying updated with emerging tech trends to constantly improve my craft.
-  </p>
+        <h2>🛠 Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Java, C#, JavaScript, Kotlin, SQL, HTML/CSS</li>
+          <li><strong>Frameworks:</strong> React, React Native, Express.js</li>
+          <li><strong>Tools:</strong> Git, Firebase, VS Code, Android Studio, NetBeans, ASP.NET</li>
+          <li><strong>Focus:</strong> Cross-Platform Apps, UI/UX, Mobile & Web Development</li>
+        </ul>
 
-  <h2>🚧 Currently Working On</h2>
-  <ul>
-    <li>Freelance projects across web and mobile platforms</li>
-    <li>Deepening my expertise in React Native and cross-platform development</li>
-    <li>Building and maintaining this portfolio using Astro</li>
-  </ul>
+        <h2>🚧 Currently Working On</h2>
+        <ul>
+          <li>Freelance projects (web & mobile)</li>
+          <li>Mastering React Native for cross-platform apps</li>
+          <li>Building this portfolio using Astro</li>
+        </ul>
 
-  <h2>🌱 Outside of Development</h2>
-  <ul>
-    <li>Working out to stay active and focused</li>
-    <li>Hiking and enjoying nature’s calm</li>
-    <li>Spending quality time with family and friends</li>
-    <li>Coding in my free time — learning new languages or building side projects</li>
-  </ul>
+        <h2>🌱 Outside of Code</h2>
+        <ul>
+          <li>Working out to stay active</li>
+          <li>Hiking and enjoying nature</li>
+          <li>Spending time with loved ones</li>
+          <li>Exploring new technologies for fun</li>
+        </ul>
 
-  <p>
-    I believe the best developers bring not only technical skills, but also creativity, curiosity, and a balanced lifestyle. I'm always excited to collaborate, learn, and grow in this dynamic field.
-  </p>
-</Layout>
+        <p>
+          I believe great developers combine technical skill with curiosity, creativity, and continuous learning.
+        </p>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
